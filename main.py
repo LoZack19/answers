@@ -1,30 +1,37 @@
-def init_answers(filename: str, len_: int) -> list:
-    answers = [0] * len_
+def init_answers(filename: str) -> list:
+    answers = []
 
     with open(filename, 'r') as infile:
-        for line in infile:
-            record = line.strip().split('\t')
-            for i in range(len(record) // 2):
-                ind = int(record[2 * i]) - 1
-                answers[ind] = record[2 * i + 1]
+        answers = infile.readline().strip().split(';')
     
     return answers
 
 
-def get_answer(quiz: int, answers: list) -> str:
-    ind = quiz - 1
-    return answers[ind]
+def get_answer(buffer: str, answers: list) -> str:
+    answer = None
+
+    try:
+        ind = int(buffer) - 1
+        answer = answers[ind]
+    except IndexError as err:
+        print("Quiz", buffer, "not found")
+    except ValueError as err:
+        print("Invalid quiz number")
+    
+    return answer
 
 
 def main():
-    answers = init_answers("answers.dat", 415)
+    answers = init_answers("answers.txt")
 
     done = False
     while not done:
         buffer = input("> ")
         done = buffer in ['q', 'quit', 'exit']
         if not done:
-            print("Answer:", get_answer(int(buffer), answers))
+            answer = get_answer(buffer, answers)
+            if answer != None:
+                print("Answer:", answer)
     
 
 if __name__ == "__main__":

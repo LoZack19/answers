@@ -1,5 +1,5 @@
 # Anwers
-Answers is a python program which provides answers to the chemistry quiz provided in this repository in time-efficient and non too revealing way. I think we all can agree that if I want the answer to question n°1, this doen't necessarely mean that I want to read what the answer to the next question is.
+Answers is a python program which provides answers to the chemistry quiz present in this repository in a time-efficient and non too revealing way. I think we all can agree that if I want the answer to question n°1, this doen't necessarely mean that I want to read what the answer to the next question is.
 
 Feel free to download this program if you ever have the same need.
 
@@ -11,6 +11,8 @@ After you've downloaded the zip you're almost there. Unzip it in a folder, open 
 ```batch
 > python main.py
 ```
+
+Alternatively you can double-click on the script and it will run. If you don't have python installed on your system you should install it, but probabily if you need this quiz you already use python.
 
 ## Usage
 Write the number of the quiz you want the answer to. It will give you the correct answer. If the answer is not what you expected, you did the quiz wrong. *Never shall you doubt of my software* :)

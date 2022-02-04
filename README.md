@@ -1,4 +1,4 @@
-# Asnwers
+# Anwers
 Answers is a python program which provides answers to the chemistry quiz provided in this repository in time-efficient and non too revealing way. I think we all can agree that if I want the answer to question n°1, this doen't necessarely mean that I want to read what the answer to the next question is.
 
 Feel free to download this program if you ever have the same need.
